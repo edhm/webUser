@@ -9,10 +9,11 @@ namespace Users.Controllers
     public class UserController : Controller
     {
         [HttpGet]
-        public IActionResult Index(int id)
+        public IActionResult Index(string data,int age)
         {
-            ViewData["id"] = id;
-            return View();
+            String datos = data + " "+ age;
+            return View("Index", datos);
         }
-    }
+    } 
+
 }
